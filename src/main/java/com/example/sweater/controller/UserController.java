@@ -22,7 +22,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
     @GetMapping
     public String userList(Model model) {
         model.addAttribute("users", userRepository.findAll());
@@ -51,7 +50,6 @@ public class UserController {
                user.getRoles().add(Role.valueOf(key));
            }
        }
-
         userRepository.save(user);
 
         return "redirect:/user";

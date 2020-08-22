@@ -20,4 +20,5 @@ List of users
     </#list>
         </tbody>
     </table>
+    <p><a href="/main">list massages</a></p>
 </@c.page>
