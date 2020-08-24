@@ -49,7 +49,9 @@ public class MainController {
     }
 
     @PostMapping("add")
-    public String add(@AuthenticationPrincipal User user, @RequestParam String text, @RequestParam String tag, Map<String, Object> model,
+    public String add(@AuthenticationPrincipal User user,
+                      @RequestParam String text,
+                      @RequestParam String tag, Map<String, Object> model,
                       @RequestParam("file") MultipartFile file) throws IOException {
 
         Message message = new Message(text, tag, user);

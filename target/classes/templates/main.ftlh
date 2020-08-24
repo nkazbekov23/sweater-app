@@ -10,11 +10,10 @@
             </form>
         </div>
     </div>
+
     <a class="btn btn-primary" data-toggle="collapse" href="#message" role="button" aria-expanded="false" aria-controls="collapseExample">
         Add new message
     </a>
-
-
     <div class="collapse" id="message">
         <div class="form-group mt-3">
             <form method="post" action="/add" enctype="multipart/form-data">

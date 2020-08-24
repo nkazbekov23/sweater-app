@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                     .authorizeRequests()
                     //по этому пути разрешаем всем
-                    .antMatchers("/", "/registration", "/static/**").permitAll()
+                    .antMatchers("/", "/registration", "/static/**", "/activate/*").permitAll()
                     //по другим адресам просим автоизоваться
                     .anyRequest().authenticated()
                 .and()
