@@ -1,6 +1,10 @@
 package com.example.sweater.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.Length;
+
+
 
 @Entity
 public class Message {
@@ -9,8 +13,10 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Length(max = 2048, message = "Message to long")
+    @NotBlank(message = "Please fill the message")
     private String text;
-
+    @Length(max = 255, message = "message more then 255")
     private String tag;
 
     private String filename;
