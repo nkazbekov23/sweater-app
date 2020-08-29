@@ -3,11 +3,11 @@
 
 <#--        username-->
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">User Name :</label>
+            <label class="col-sm-2 col-form-label">Имя пользователя :</label>
             <div class="col-sm-6">
                 <input type="text" name="username" value="<#if user??>${user.username}</#if>"
                        class="form-control ${(usernameError??)?string('is-invalid', '')}"
-                       placeholder="User name" />
+                       placeholder="логин" />
                 <#if usernameError??>
                     <div class="invalid-feedback">
                         ${usernameError}
@@ -22,7 +22,7 @@
             <div class="col-sm-6">
                 <input type="password" name="password"
                        class="form-control ${(passwordError??)?string('is-invalid', '')}"
-                       placeholder="Password" />
+                       placeholder="пароль" />
                 <#if passwordError??>
                     <div class="invalid-feedback">
                         ${passwordError}
@@ -38,7 +38,7 @@
                 <div class="col-sm-6">
                     <input type="password" name="password2"
                            class="form-control ${(password2Error??)?string('is-invalid', '')}"
-                           placeholder=" Retype Password" />
+                           placeholder="повторите пароль" />
                     <#if password2Error??>
                         <div class="invalid-feedback">
                             ${password2Error}
@@ -53,7 +53,7 @@
             <div class="col-sm-6">
                 <input type="email" name="email" value="<#if user??>${user.email}</#if>"
                        class="form-control ${(emailError??)?string('is-invalid', '')}"
-                       placeholder="some@some.com" />
+                       placeholder="почта" />
                 <#if emailError??>
                     <div class="invalid-feedback">
                         ${emailError}
@@ -70,14 +70,14 @@
         </#if>
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            <#if !isRegisterForm><a href="/registration">add new user</a></isRegisterForm></#if>
-        <button class="btn btn-primary" type="submit"><#if isRegisterForm>Create<#else>Sign in</#if></button>
+            <#if !isRegisterForm><a href="/registration">Зарегестрироваться</a></isRegisterForm></#if>
+        <button class="btn btn-primary" type="submit"><#if isRegisterForm>Create<#else>Войти</#if></button>
     </form>
 </#macro>
 
 <#macro logout>
     <form action="/logout" method="post">
         <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button class="btn btn-primary" type="submit">Sign in</button>
+        <button class="btn btn-primary" type="submit">Войти</button>
     </form>
 </#macro>

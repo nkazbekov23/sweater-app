@@ -12,7 +12,7 @@
     </div>
 
     <a class="btn btn-primary" data-toggle="collapse" href="#message" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Add new message
+        Добавить новое сообщение
     </a>
     <div class="collapse <#if message??>show</#if>" id="message">
         <div class="form-group mt-3">
