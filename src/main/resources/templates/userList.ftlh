@@ -20,5 +20,5 @@ List of users
     </#list>
         </tbody>
     </table>
-    <p><a href="/main">list massages</a></p>
+    <p><a href="/main">В список сообщений</a></p>
 </@c.page>

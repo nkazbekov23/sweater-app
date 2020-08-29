@@ -47,16 +47,16 @@ public class RegistrationController {
         CaptchaResponseDto response = restTemplate.postForObject(url, Collections.emptyList(), CaptchaResponseDto.class);
 
         if (!response.isSuccess()) {
-            model.addAttribute("captchaError", "Fill captcha");
+            model.addAttribute("captchaError", "Заполните");
         }
 
         boolean confirmEmpty = StringUtils.isEmpty(passwordConfirm);
         if (confirmEmpty) {
-            model.addAttribute("password2Error", "Password confirmation cannot be empty");
+            model.addAttribute("password2Error", "подтверждение пароля не должно быть пустым");
         }
 
         if (user.getPassword() != null && !user.getPassword().equals(passwordConfirm)) {
-            model.addAttribute("passwordError", "Password are different");
+            model.addAttribute("passwordError", "пароли не совподают");
             return "registration";
         }
         if (confirmEmpty || bindingResult.hasErrors() || !response.isSuccess()) {
@@ -77,10 +77,10 @@ public class RegistrationController {
 
         if (isActivateCode) {
             model.addAttribute("messageType", "success");
-            model.addAttribute("message", "User successfully activated");
+            model.addAttribute("message", "Пользователь успешно активирован");
         } else {
             model.addAttribute("messageType", "danger");
-            model.addAttribute("message", "Activation code is not found");
+            model.addAttribute("message", "Код активации не найдено");
         }
         return "login";
     }

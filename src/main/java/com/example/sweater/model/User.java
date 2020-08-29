@@ -17,18 +17,18 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank(message = "Username cannot be empty")
+    @NotBlank(message = "поле логин не должно быть пустым")
     private String username;
 
     private String login;
 
-    @NotBlank(message = "password cannot be empty")
+    @NotBlank(message = "поле пароль не должен быть пустым")
     private String password;
 
     private boolean active;
 
-    @Email(message = "Email is not correct")
-    @NotBlank(message = "Email cannot be empty")
+    @Email(message = "Почта не корректна")
+    @NotBlank(message = "поле почта не должно быть пустым")
     private String email;
     private String activationCode;
 
