@@ -1,6 +1,6 @@
 <#import "parts/common.ftlh" as c>
 
 <@c.page>
-<h5>Hello, guest</h5>
-    <div>this is a simple clone of twitter</div>
+<h5>Здравствуйте, пользователь</h5>
+    <div>Добро пожаловать на наш сайт!</div>
 </@c.page>
