@@ -15,7 +15,7 @@
                 <a class="btn btn-info" href="/user-messages/${message.author.id}">${message.authorName}</a>
                 <#if message.author.id == currentUserId>
                     <a class="btn btn-primary" href="/user-messages/${message.author.id}?message=${message.id}">
-                        Edit
+                        Редактировать
                     </a>
                 </#if>
             </div>

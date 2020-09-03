@@ -6,7 +6,7 @@
         <div class="form-group col-mb-6">
             <form method="get" action="/main" class="form-inline">
                 <input type="text" class="form-control" name="filter" value="${filter!}" placeholder="Search by tag">
-                <button type="submit" class="btn btn-primary ml-2">Find</button>
+                <button type="submit" class="btn btn-primary ml-2">Найти</button>
             </form>
         </div>
     </div>
